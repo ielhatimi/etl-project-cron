@@ -50,16 +50,6 @@ services :
     environment:
       DBT_PROFILE: custom_postgres
       DBT_TARGET: dev
-  postgres:
-    image: postgres:latest
-    environment:
-      POSTGRES_USER: airflow
-      POSTGRES_PASSWORD: airflow
-      POSTGRES_DB: airflow
-    ports:
-      - "5435:5432"
-    networks:
-      - elt_network
   
 networks:
   elt_network:
